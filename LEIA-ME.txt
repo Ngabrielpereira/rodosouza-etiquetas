@@ -1,0 +1,26 @@
+RODOSOUZA — PWA para iPhone e Android (protótipo)
+
+Este pacote é um aplicativo web instalável (PWA). Não exige Mac para abrir e testar no iPhone, mas precisa ser publicado em um endereço HTTPS antes de instalar pela tela inicial.
+
+Inclui:
+- Logotipo da transportadora.
+- Navegação móvel.
+- Etiquetas com ENTREGA (verde) e COLETA (vermelho).
+- Importação local de XML e cadastro manual.
+- Classificação por cidades da planilha fornecida.
+- Impressão pelo menu do navegador.
+- Registros salvos localmente no aparelho (localStorage).
+
+LIMITAÇÕES IMPORTANTES:
+- Ainda não existe banco compartilhado: os dados ficam apenas no navegador/aparelho usado.
+- Ainda não consulta a SEFAZ. Importa XML que o usuário já tenha.
+- O parser XML é protótipo e requer validação com XMLs reais de NF-e e CT-e.
+- A impressão deve ser testada com o modelo de etiqueta e impressora usados pela empresa.
+
+COMO TESTAR NO IPHONE:
+1. Publique os arquivos em hospedagem HTTPS (ex.: GitHub Pages ou serviço equivalente).
+2. Abra o link publicado no Safari do iPhone.
+3. Toque em Compartilhar > Adicionar à Tela de Início.
+4. Abra o ícone Rodosouza na tela inicial.
+
+Para publicar usando somente o iPhone, é possível usar o site do GitHub pelo Safari, criar um repositório e enviar os arquivos. Alternativamente, alguém com computador pode fazer a publicação inicial. Não envie certificados digitais ou XMLs com dados pessoais para repositórios públicos.
