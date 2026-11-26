@@ -25,7 +25,7 @@ label{font-size:13px;font-weight:700}.type{display:flex;gap:8px}.type button{fle
 @media print{body{background:white;padding:0}header,nav,.noprint{display:none!important}main{padding:0}.printlabel{display:block!important;box-shadow:none;border:0;width:100mm;height:150mm;margin:0;padding:8mm;page-break-after:always}.printlabel .bigcity{font-size:30pt}.printlabel .tag{font-size:26pt}}
 </style></head>
 <body>
-<header><img src="assets/logo.jpg" alt="Transportes Rodosouza"><b>ETIQUETAS E ROTAS</b></header>
+<header><img src="logo.jpg" alt="Transportes Rodosouza"><b>ETIQUETAS E ROTAS</b></header>
 <main>
 <section id="home">
 <h1>Painel operacional</h1><p class="muted">Protótipo móvel • dados salvos neste iPhone</p>
@@ -63,7 +63,7 @@ label{font-size:13px;font-weight:700}.type{display:flex;gap:8px}.type button{fle
 <script>
 let kind='ENTREGA', shipments=JSON.parse(localStorage.getItem('rs_shipments')||'[]'), routeMap={};
 const norm=s=>(s||'').normalize('NFD').replace(/[\\u0300-\\u036f]/g,'').toUpperCase().replace(/[^A-Z0-9 ]/g,' ').replace(/\\s+/g,' ').trim();
-fetch('assets/routes.json').then(r=>r.json()).then(x=>{routeMap=x;render()}).catch(()=>{});
+fetch('routes.json').then(r=>r.json()).then(x=>{routeMap=x;render()}).catch(()=>{});
 function routeFor(city){return routeMap[norm(city)]||'ROTA NÃO CADASTRADA'}
 function persist(){localStorage.setItem('rs_shipments',JSON.stringify(shipments));render()}
 function setKind(k){kind=k;document.getElementById('entBtn').classList.toggle('selected',k==='ENTREGA');document.getElementById('colBtn').classList.toggle('selected',k==='COLETA')}
